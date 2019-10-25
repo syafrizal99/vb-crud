@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Test Program", "Test Program\Test Program.vbproj", "{180CA43B-24A0-43EF-A9E1-605E6F4FD0EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{180CA43B-24A0-43EF-A9E1-605E6F4FD0EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{180CA43B-24A0-43EF-A9E1-605E6F4FD0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{180CA43B-24A0-43EF-A9E1-605E6F4FD0EA}.Debug|x86.ActiveCfg = Debug|x86
+		{180CA43B-24A0-43EF-A9E1-605E6F4FD0EA}.Debug|x86.Build.0 = Debug|x86
+		{180CA43B-24A0-43EF-A9E1-605E6F4FD0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{180CA43B-24A0-43EF-A9E1-605E6F4FD0EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{180CA43B-24A0-43EF-A9E1-605E6F4FD0EA}.Release|x86.ActiveCfg = Release|x86
+		{180CA43B-24A0-43EF-A9E1-605E6F4FD0EA}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

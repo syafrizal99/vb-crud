@@ -1,0 +1,8 @@
+D:\VB\Test Program - Access\Test Program\bin\Debug\Test Program.exe
+D:\VB\Test Program - Access\Test Program\bin\Debug\Test Program.pdb
+D:\VB\Test Program - Access\Test Program\obj\Debug\Test_Program.FormBarang.resources
+D:\VB\Test Program - Access\Test Program\obj\Debug\Test_Program.FormLogin.resources
+D:\VB\Test Program - Access\Test Program\obj\Debug\Test_Program.Resources.resources
+D:\VB\Test Program - Access\Test Program\obj\Debug\Test Program.vbproj.GenerateResource.Cache
+D:\VB\Test Program - Access\Test Program\obj\Debug\Test Program.exe
+D:\VB\Test Program - Access\Test Program\obj\Debug\Test Program.pdb
