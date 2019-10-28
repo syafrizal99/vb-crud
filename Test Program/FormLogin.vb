@@ -5,45 +5,48 @@ Public Class FormLogin
 
     Public NamaMhs As String
 
-    Private Sub bMasuk_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bMasuk.Click
+    Private Sub bMasuk_Click(ByVal sender As System.Object, _
+                             ByVal e As System.EventArgs) Handles bMasuk.Click
 
         'membukan koneksi ke database
         KoneksiDB.HubungkanDB()
 
         Dim CekAuth As OleDbDataReader
         Dim QuerySelect As New OleDbCommand
+        Dim strNim As String = tbNim.Text
+        Dim strKataSandi As String = tbKataSandi.Text
 
         Try
             'pastikan untuk Close() pada setiap ExecuteReader di jalankan
             'CekAuth.Close() => contoh
             QuerySelect.CommandType = CommandType.Text
-            QuerySelect.CommandText = "SELECT * FROM tb_user WHERE nim ='" + tbNim.Text _
-                + "' AND pass_mhs='" + tbKataSandi.Text + "'"
+            QuerySelect.CommandText = "SELECT * FROM tb_user WHERE nim ='" + strNim _
+                + "' AND pass_mhs='" + strKataSandi + "'"
             QuerySelect.Connection = KoneksiDB.conn
             CekAuth = QuerySelect.ExecuteReader()
 
-            If tbNim.Text = "" OrElse tbKataSandi.Text = "" Then
+            If strNim = "" OrElse strKataSandi = "" Then
                 MsgBox("nim atau kata sandi masing kosong ",
                        MsgBoxStyle.Exclamation, "Error Login")
-                CekAuth.Close()
             ElseIf CekAuth.HasRows = False Then
                 MsgBox("nim dan password tidak cocok!! ",
                        MsgBoxStyle.Exclamation, "Error Login")
-                CekAuth.Close()
             Else
                 CekAuth.Read()
                 NamaMhs = CekAuth("nama_mhs").ToString()
-                MsgBox("Login berhasil, Selamat datang " & CekAuth("nama_mhs").ToString() & "!", MsgBoxStyle.Information, "Successfull Login")
-                CekAuth.Close()
+                MsgBox("Login berhasil, Selamat datang " & CekAuth("nama_mhs").ToString() & _
+                       "!", MsgBoxStyle.Information, "Successfull Login")
                 FormBarang.Show()
                 Me.Hide()
             End If
+            CekAuth.Close()
         Catch ex As Exception
             MsgBox("Error" + ex.Message, MsgBoxStyle.Critical)
         End Try
     End Sub
 
-    Private Sub FormLogin_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub FormLogin_Load(ByVal sender As System.Object, _
+                               ByVal e As System.EventArgs) Handles MyBase.Load
         KoneksiDB.HubungkanDB()
     End Sub
 
@@ -54,10 +57,10 @@ Public Class FormLogin
                 e.Handled = True
             End If
         End If
-
     End Sub
 
-    Private Sub tbNim_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles tbNim.KeyPress
+    Private Sub tbNim_KeyPress(ByVal sender As Object, ByVal e As  _
+                               System.Windows.Forms.KeyPressEventArgs) Handles tbNim.KeyPress
         HanyaAngka(e)
     End Sub
 

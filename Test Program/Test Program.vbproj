@@ -115,6 +115,12 @@
       <DependentUpon>FormBarang.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormDaftar.Designer.vb">
+      <DependentUpon>FormDaftar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDaftar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormLogin.Designer.vb">
       <DependentUpon>FormLogin.vb</DependentUpon>
     </Compile>
@@ -141,6 +147,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FormBarang.resx">
       <DependentUpon>FormBarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDaftar.resx">
+      <DependentUpon>FormDaftar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
